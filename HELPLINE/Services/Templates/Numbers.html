@@ -1,0 +1,36 @@
+{% extends 'Base.html' %}
+{% block title %}College{% endblock title %}
+
+{% block content %}
+
+
+
+{% for num in no %}
+      <div class="container col-lg-7 p-2">
+      <div class="card" >
+        
+        <div class="card-body">
+          <h5 class="card-title">Details of {{num.title}}</h5>
+          <p class="card-text">&nbsp;&nbsp;  {{num.desc}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name : {{num.fname}}&nbsp;{{num.lname}}</li>
+          <li class="list-group-item">Mobile Number : {{num.mobileno}}<a href='tel:{{num.mobileno}}'></a></li>
+          <li class="list-group-item"> Mail : <a href="mailto:{{num.mail}}">{{num.mail}}</a></li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary disabled">Copy Mobile Number</a>
+        </div>
+      </div>
+      </div>
+
+    
+{% endfor %}
+
+
+
+{% endblock content %}
+
+
+
+

@@ -1,0 +1,39 @@
+{% extends 'Base.html' %}
+{% block title %}Manchar{% endblock title %}
+
+{% block content %}
+
+
+
+{% for num in no %}
+<div class="container col-lg-8 p-4">
+<div class="card">
+  <div class="card-header">
+   Details of {{num.title}}
+  </div>
+  <div class="card-body">
+    
+    <p class="card-text">
+        Name : {{num.fname}}&nbsp;{{num.lname}}
+        <hr>
+        Mobile Number : {{num.mobileno}}
+        <hr>
+        Mail ID : <a href="mailto:{{num.mail}}">{{num.mail}}</a>
+        <hr>
+         Description : {{num.desc}}
+    </p>
+
+    <a href="#" class="btn btn-primary disabled">Copy Mobile Number </a>
+  </div>
+</div>
+</div>
+    
+{% endfor %}
+
+
+
+{% endblock content %}
+
+
+
+
